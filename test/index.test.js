@@ -7,6 +7,7 @@ function sum(a, b) {
 const BACKEND_URL = "http://localhost:3000";
 
 describe("Authentication", () => {
+
   test("User is able to signup only once", async () => {
     const username = "sohel" + Math.random();
     const password = "123456";
@@ -64,4 +65,5 @@ describe("Authentication", () => {
     expected(response.statusCode).toBe(403);
     expected(response.body.token).toBeUndefined();
   });
+
 });
